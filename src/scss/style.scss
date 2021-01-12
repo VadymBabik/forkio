@@ -1,0 +1,14 @@
+@import "reset";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffe9d8;
+}
+
+.container {
+  max-width: 1500px;
+  margin: 0 auto;
+}
