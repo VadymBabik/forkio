@@ -1,0 +1,36 @@
+.hero {
+  background-image: url(../img/bg/fork320.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  &__title {
+    padding: 50px 0 19px;
+    font-size: 48px;
+    //line-height: 48px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  &__subtitle {
+    margin: 0 25px;
+    font-family: "Lato", sans-serif;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: $purple;
+    text-transform: capitalize;
+  }
+
+  &__text {
+    display: block;
+    font-weight: normal;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #848E97;
+    padding: 14px 0 416px;
+  }
+
+}
