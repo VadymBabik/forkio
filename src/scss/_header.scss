@@ -7,8 +7,6 @@
   position: relative;
 
   &__logo {
-
-
   }
 
   .logo {
@@ -49,15 +47,14 @@
 
     &:hover {
       color: $purple;
-      background: #FFFFFF;
+      background: #ffffff;
     }
-
   }
 
   &__menu {
     position: absolute;
     //display: block;
-    top: 103.5px;
+    top: 101px;
     left: 0;
     display: none;
   }
@@ -69,7 +66,7 @@
     &__items {
       padding: 19px 0;
       background: #333333;
-      border-bottom: 3px solid #3B3B3B;
+      border-bottom: 3px solid #3b3b3b;
     }
 
     &__link {
@@ -77,8 +74,8 @@
       font-weight: 400;
       font-size: 26px;
       padding: 4px 0 4px 29px;
-      line-height: 26px;
-      color: #FFFFFF;
+      line-height: 53px;
+      color: #ffffff;
       border-left: 8px solid #333333;
       transition: color 150ms linear, border-left 150ms linear;
 
@@ -107,10 +104,11 @@
     background-color: #ffffff;
     border-radius: 2px;
 
-    &::before, &::after {
-      content: '';
+    &::before,
+    &::after {
+      content: "";
       @extend span;
-      transition: .2s;
+      transition: 0.2s;
     }
 
     &::before {
@@ -123,7 +121,6 @@
     }
   }
 }
-
 
 .active {
   span {
@@ -142,5 +139,5 @@
 }
 
 .show {
-  display: block
+  display: block;
 }
