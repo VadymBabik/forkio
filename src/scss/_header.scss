@@ -1,3 +1,10 @@
+header {
+  background-image: url(../img/bg/fork320.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
 .header {
   background: $bgColorHeader;
   display: flex;
@@ -62,6 +69,7 @@
   .nav-menu {
     width: 100%;
     padding: 0 15px;
+    z-index: 1;
 
     &__items {
       padding: 19px 0;
@@ -140,4 +148,112 @@
 
 .show {
   display: block;
+}
+
+
+@media (min-width: 481px) {
+  header {
+    background-image: url(../img/bg/fork768.jpg);
+  }
+  .header__burger {
+    display: none;
+  }
+  .header {
+    padding: 22px 20px 0;
+    display: grid;
+    grid-template-areas: "logo button"
+    "menu menu";
+
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+
+    &__logo {
+      grid-area: logo;
+    }
+
+    .logo {
+      &__text {
+        display: block;
+      }
+    }
+
+    &__button {
+      grid-area: button;
+      width: max-content;
+      justify-self: end;
+    }
+
+    //
+    &__menu {
+      position: static;
+      top: inherit;
+      left: inherit;
+      display: block;
+      grid-area: menu;
+    }
+
+    .nav-menu {
+      padding-bottom: 23px;
+
+      &__list {
+        margin: 0 auto;
+        display: flex;
+        max-width: 520px;
+        justify-content: space-between;
+      }
+
+      &__items {
+        display: block;
+        background: none;
+        border-bottom: none;
+      }
+
+      &__link {
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 16px;
+        padding: 0;
+        line-height: 18px;
+        color: $purple;
+        border-left: none;
+        transition: color 150ms linear, border-left 150ms linear;
+
+        &:hover {
+          color: #ffffff;
+          border-left: none;
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width: 993px) {
+  header {
+    background-image: url(../img/bg/fork1200.jpg);
+  }
+
+  .header {
+    background: none;
+    grid-template-areas: "logo menu button";
+    //"menu menu";
+    grid-template-rows: 1fr 1fr 1fr;
+    //grid-template-columns: 1fr 1fr;
+    &__menu {
+      padding: 0 38px 0 0;
+    }
+
+    .nav-menu {
+      padding: 0;
+
+      &__items {
+        padding: 0;
+
+      }
+
+      &__list {
+        max-width: none;
+      }
+    }
+  }
 }

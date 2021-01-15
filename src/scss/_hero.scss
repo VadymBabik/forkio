@@ -1,13 +1,12 @@
 .hero {
-  background-image: url(../img/bg/fork320.jpg);
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   &__title {
     padding: 50px 0 19px;
     font-size: 48px;
-    //line-height: 48px;
     text-align: center;
     color: #FFFFFF;
   }
@@ -33,4 +32,58 @@
     padding: 14px 0 416px;
   }
 
+  &__button {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    line-height: 20px;
+    transform: translateY(50%);
+    margin: 0 auto;
+    transition: color 150ms linear, background 150ms linear;
+
+    &:hover {
+      color: $purple;
+      background: #FFFFFF;
+      border: 1px solid $purple;
+    }
+  }
+}
+
+@media (min-width: 481px) {
+  .hero {
+
+    &__title {
+      padding: 69px 0 19px;
+      font-size: 72px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+
+    &__subtitle {
+      margin: 0 auto;
+      font-family: "Lato", sans-serif;
+      font-weight: normal;
+      font-size: 24px;
+      line-height: 24px;
+      text-align: center;
+      color: $purple;
+      text-transform: capitalize;
+    }
+
+    &__text {
+      padding: 19px 0 462px;
+    }
+
+    &__button {
+      font-size: 21px;
+      line-height: 23px;
+      padding: 23px 61px;
+
+      &:hover {
+        color: $purple;
+        background: #FFFFFF;
+        border: 1px solid $purple;
+      }
+    }
+  }
 }
